@@ -5,4 +5,6 @@ Bundler.require(:default, ENV['SINATRA_ENV'])
 
 ActiveRecord::Base.establish_connection(ENV['SINATRA_ENV'].to_sym)
 
+# require_relative '../app/models/helpers'
+require_all 'app/models'
 require_all 'app'
